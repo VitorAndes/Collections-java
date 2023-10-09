@@ -36,9 +36,7 @@ public class Produto implements Comparable<Produto> {
     public int getQuantidade() {
         return quantidade;
     }
-
     
-
     @Override
     public int hashCode() {
         final int prime = 31;

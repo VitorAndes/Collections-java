@@ -27,11 +27,10 @@ public class CadastroProdutos {
 
     //atributos
     private Set<Produto> produtoSet;
-
     public CadastroProdutos() {
         this.produtoSet = new HashSet<>();
     }
-    
+
     //Adicionar produto
     public void adicionarProduto(String nome, long cod, double preco, int quantidade){
         produtoSet.add(new Produto(nome, cod, preco, quantidade));
@@ -42,12 +41,11 @@ public class CadastroProdutos {
         Set<Produto> produtosPorNome = new TreeSet<>(produtoSet);
         return produtosPorNome;
     }
-
+    
     //Exibir produtos por preço
     public Set<Produto> exibirProdutosPorPreco(){
         Set<Produto> produtosPorPreco = new TreeSet<>(new ComparatorPorPreco());
         produtosPorPreco.addAll(produtoSet);
         return produtosPorPreco;
     }    
-
 }
